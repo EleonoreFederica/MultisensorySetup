@@ -1,0 +1,12 @@
+{
+    "SUBJECTNAME"   : "subjectname",
+    "ISI_MIN" : 100,
+    "ISI_MAX" : 500,
+    "STIM_DURATION" : 50,
+    "ONSET" : 0,
+    "OFFSET" : 50,
+    "NUMBER_OF_STIMULI" : 2,
+    "CHANNEL" : 6,
+    "WRITEOUTPUT" : false,
+    "USE_WHITENOISE" : true
+}

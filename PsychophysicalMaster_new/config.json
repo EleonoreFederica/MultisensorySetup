@@ -1,0 +1,15 @@
+{
+    "DEFAULT_TRIAL_DURATION" : 3000,
+    "DEFAULT_STIMULI_DURATION": 50,
+    "VISUAL_CONTROLLER_NAMES" : ["SLAVE1","SLAVE2"],
+    "USE_INTERFACE_NOT_FILE" : false,
+    "USE_PEDAL_CONTROL" : false,
+    "EXPERIMENT_FILE_IF_USED" : "sample_experiment.json",
+    "TRIAL_START_PORT" : 10,
+    "TRIAL_RESET_PORT" : 19,
+    "SBJ_READY_PORT" : 5,
+    "RESPONSE_INTERRUPT_PORT": 24,
+    "AUDIO_PORTS" : [6,7],
+    "V_STIMULI_PATH" : "/home/pi/Desktop/PsychophysicalMaster_new/VisualStimuli/V_STIMULI.json"
+}
+
