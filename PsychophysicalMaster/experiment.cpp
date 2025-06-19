@@ -199,20 +199,38 @@ void Experiment::runExperiment()
                 }
                 else { // the trial is on going: generate white nise on the target channel
                     list<Auditory_Stimulus> astim = trials[trialorder.front()].auditory_stimuli;
-                    for(auto& as : astim){
-                        if(as.state==Auditory_Stimulus::DURING){
-                            if(elapsed>as.offset){
-                                as.state=Auditory_Stimulus::PRE;
-                            }
-                        }
-                        else if((elapsed>as.onset)&&(elapsed<as.offset)){
-                            if(as.state==Auditory_Stimulus::PRE){
-                                as.state=Auditory_Stimulus::DURING;
-                                int randomValue = rand() % 2;
-                                lgGpioWrite(GC::GPIO,as.channel,randomValue);
-                            }
-                        }
+                    // for(auto& as : astim){
+                    //     if(as.state==Auditory_Stimulus::DURING){
+                    //         if(elapsed>as.offset){
+                    //             as.state=Auditory_Stimulus::PRE;
+                    //             std::cout << "\r[DEBUG] state PRE | elapsed: " << elapsed << std::endl;
+                    //         }
+                    //     }
+                    //     else if((elapsed>as.onset)&&(elapsed<as.offset)){
+                    //         if(as.state==Auditory_Stimulus::PRE){
+                    //             as.state=Auditory_Stimulus::DURING;
+                    //             std::cout << "\r[DEBUG] state DURING | elapsed: " << elapsed << std::endl;
+                    //             int randomValue = rand() % 2;
+                    //             lgGpioWrite(GC::GPIO,as.channel,randomValue);
+                    //         }
+                    //     }
 
+                    // }
+                    for(auto& as : astim) {
+                        if(elapsed >= as.onset && elapsed < as.offset) {
+                            if(as.state != Auditory_Stimulus::DURING) {
+                                as.state = Auditory_Stimulus::DURING;
+                                // std::cout << "\r[DEBUG] state DURING | elapsed: " << elapsed << std::endl;
+                            }
+                            int randomValue = rand() % 2;
+                            lgGpioWrite(GC::GPIO,as.channel,randomValue);
+                            } else {
+                            if(as.state != Auditory_Stimulus::PRE) {
+                                as.state = Auditory_Stimulus::PRE;
+                                // std::cout << "\r[DEBUG] state PRE | elapsed: " << elapsed << std::endl;
+                            }
+                            lgGpioWrite(GC::GPIO,as.channel,0);
+                        }
                     }
                     // long elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(this_time-start).count();
                     // auditorycontroller.update(elapsed,trials[trialorder.front()].auditory_stimuli);
