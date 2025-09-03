@@ -1,0 +1,15 @@
+debug/ExperimentStub.o
+debug/addadialog.o
+debug/addvdialog.o
+debug/auditorystimulusstub.o
+debug/edittrialdialog.o
+debug/gc.o
+debug/main.o
+debug/mainwindow.o
+debug/trialstub.o
+debug/visualstimulusstub.o
+debug/qrc_qmake_qmake_qm_files.o
+debug/moc_addadialog.o
+debug/moc_addvdialog.o
+debug/moc_edittrialdialog.o
+debug/moc_mainwindow.o
