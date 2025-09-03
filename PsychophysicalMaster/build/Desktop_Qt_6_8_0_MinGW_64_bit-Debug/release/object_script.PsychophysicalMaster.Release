@@ -1,0 +1,10 @@
+release/auditory_stimulus.o
+release/auditorycontroller.o
+release/experiment.o
+release/gc.o
+release/interfaceconnector.o
+release/main.o
+release/pixel.o
+release/responsecontroller.o
+release/trial.o
+release/visual_stimulus.o

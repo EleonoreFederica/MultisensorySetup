@@ -1,0 +1,10 @@
+debug/auditory_stimulus.o
+debug/auditorycontroller.o
+debug/experiment.o
+debug/gc.o
+debug/interfaceconnector.o
+debug/main.o
+debug/pixel.o
+debug/responsecontroller.o
+debug/trial.o
+debug/visual_stimulus.o
