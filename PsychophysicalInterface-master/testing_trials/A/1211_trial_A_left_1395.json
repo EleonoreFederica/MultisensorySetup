@@ -1,0 +1,16 @@
+{
+  "DURATION": 1395,
+  "AUDITORY_STIMULI": [
+    {
+      "CHANNEL": 26,
+      "ONSET": 0,
+      "OFFSET": 50,
+      "FREQUENCY": 5000,
+      "DUTY_CYCLE": 50,
+      "CYCLE_OFFSET": 0
+    }
+  ],
+  "VISUAL_STIMULI": [],
+  "TRIAL_TYPE": "A",
+  "NAME": "1211_trial_A_left_1395"
+}
