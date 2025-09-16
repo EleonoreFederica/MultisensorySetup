@@ -16,6 +16,7 @@
 #include <libevdev-1.0/libevdev/libevdev.h>
 #include <chrono>
 #include <termios.h>
+#include <thread>
 
 // implements a ResponseController class that handles keyboard inputs during an experiment,
 // monitoring key events (keystrokes) and saving the time at which they occur relative to the start of the experiment
@@ -141,7 +142,7 @@ bool ResponseController::processEvents(std::chrono::system_clock::time_point thi
 {
     int keycode = kbhit(dev); // if successful reading then store the ev.code of that button
     if(keycode) { // manage the keyboard event only if something has been detected
-        // std::cout << "\nkeyboard hit\n";
+        std::cout << "\r----Keyboard hit----  " << to_string(keycode) << " side: " << getKeySide(keycode) << "\n";
         if(keycode == ESC_BUTTON) { // if the ESC button is pressed during exporiment execution, the global constant INT_EXECUTION will detemine the immediate exiting from experiment trial loop
             GC::INT_EXECUTION = true;
         }
@@ -149,10 +150,12 @@ bool ResponseController::processEvents(std::chrono::system_clock::time_point thi
 
         // Controllo del debounce
         if (currentElapsed - lastResponseTime < DEBOUNCE_INTERVAL) {
+            std::cout << "\rINPUT IGNORED" << endl;
             return false; // Input ignorato
         }
         // Registra l'input e aggiorna il tempo dell'ultimo input
         responses.push_back(Response(currentElapsed, getKeySide(keycode))); // append to response array the RT and the sgring
+        std::cout << "\rLAST RESPONSE: time = " << to_string(responses.back().timestamp) << " response: " << responses.back().side << endl;
         lastResponseTime = currentElapsed;
         return true;
     }

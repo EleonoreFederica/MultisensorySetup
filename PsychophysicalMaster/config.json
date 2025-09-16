@@ -8,6 +8,6 @@
     "TRIAL_RESET_PORT" : 19,
     "SBJ_READY_PORT" : 5,
     "RESPONSE_INTERRUPT_PORT": 24,
-    "AUDIO_PORTS" : [6,7]
+    "AUDIO_PORTS" : [6,7,26,25]
 }
 

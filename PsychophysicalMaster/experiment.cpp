@@ -118,10 +118,10 @@ void Experiment::runExperiment()
                 switchEState(E_ORDER_TRIALS);
             }
 
-            thefirsttrial=false;
+            // thefirsttrial=false;
         }
         else if(estate==E_ORDER_TRIALS){
-            thefirsttrial=true;
+            // thefirsttrial=true;
             cout << "\rE: Create trial order by " << trialordering << "\n";
             createTrialOrder(trialordering);
             if(trialorder.size()>0){
@@ -161,7 +161,8 @@ void Experiment::runExperiment()
                 if(allverified){
                     confirmed_controllers.clear();
                     switchTState(T_TRIAL_ON);
-                    thefirsttrial = true;
+                    start = std::chrono::high_resolution_clock::now();
+                    // thefirsttrial = true;
                     lgGpioWrite(GC::GPIO,GC::SBJ_READY_PORT ,0);
                     lgGpioWrite(GC::GPIO,GC::TRIAL_RESET_PORT,0);
                     lgGpioWrite(GC::GPIO,GC::RESPONSE_INTERRUPT_PORT,0);
@@ -171,6 +172,17 @@ void Experiment::runExperiment()
             }
             else if(tstate==T_TRIAL_ON){
                 // responsecontroller.clear_stdin();
+                // trial starting awaiting time: 2000ms
+                if(thefirsttrial){
+                    std::cout << "\r>WAIT FOR 2000ms UNTIL EXPERIMENT START..." << std::endl;
+                    const int preparation_time = 2000;
+                    this_time = std::chrono::high_resolution_clock::now();
+                    long elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(this_time-start).count();
+                    while(elapsed <= preparation_time) {
+                        this_time = std::chrono::high_resolution_clock::now();
+                        elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(this_time-start).count();
+                    }
+                }
                 lgGpioWrite(GC::GPIO,GC::TRIAL_START_PORT,1);
                 start = std::chrono::high_resolution_clock::now();
                 responsecontroller.start(start);
@@ -185,17 +197,19 @@ void Experiment::runExperiment()
                 long elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(this_time-start).count();
                 static struct libevdev *dev = NULL;
                 if(thefirsttrial && dev == NULL){
-                    responsecontroller.init_keyboard("/dev/input/event5", &dev);  // Passa il puntatore a `dev` con focus su event0 (dispositivo tastiera)
+                    responsecontroller.init_keyboard("/dev/input/event4", &dev);  // Passa il puntatore a `dev` con focus su event0 (dispositivo tastiera)
                 }
-                if((responsecontroller.processEvents(this_time, dev)) || (elapsed>=trials[trialorder.front()].duration)){
+                if (elapsed>=trials[trialorder.front()].duration){ // switch to T_END only if the whole duration of the trial has been reached
+                    switchTState(T_END);
+                }
+                if (responsecontroller.processEvents(this_time, dev)){
                     if(GC::INT_EXECUTION) { // exit the execution of the experiment if ESC button is pressed (i.e., if INIT_EXECUTION has been switchen to 'true' inside processEvents()
                         estate = E_LOAD_CONFIGURATION;
                         tstate = T_STANDBY;
                         std::cout << "\rEXECUTION INTERRUPTED\n";
                     }
-                    std::cout << "\relapsed " << to_string(elapsed) << "vs " << to_string(trials[trialorder.front()].duration);
                     // lgGpioWrite(GC::GPIO,GC::RESPONSE_INTERRUPT_PORT,1); // tell the slave to interrupt the visual cue execution
-                    switchTState(T_END);
+                    // cout << "\rELAPSED " << to_string(elapsed) << "vs " << to_string(trials[trialorder.front()].duration);
                 }
                 else { // the trial is on going: generate white nise on the target channel
                     list<Auditory_Stimulus> astim = trials[trialorder.front()].auditory_stimuli;
@@ -235,7 +249,7 @@ void Experiment::runExperiment()
                     // long elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(this_time-start).count();
                     // auditorycontroller.update(elapsed,trials[trialorder.front()].auditory_stimuli);
                 }
-                thefirsttrial = false;
+                // thefirsttrial = false;
             }
             else if(tstate==T_END){
                 cout << "\rT: Trial ends" << std::endl;
@@ -275,7 +289,7 @@ void Experiment::runExperiment()
                     if(writeoutput) GC::appendToFile(outputfilename,"]");
                     if(GC::USE_INTERFACE_NOT_FILE) estate=E_LOAD_CONFIGURATION;
                     else switchEState(E_END);
-                    thefirsttrial=false;
+                    thefirsttrial = true;
                     cout << "\r******************************************" << std::endl;
                     cout << "\r                 END EXPERIMENT               " << std::endl;
                     cout << "\r******************************************" << std::endl;
@@ -307,9 +321,9 @@ bool Experiment::informControllers(Trial &t)
         tcp::socket socket_slave1(io_context);
         acceptor_slave1.accept(socket_slave1);
         // slave 2
-        // tcp::acceptor acceptor_slave2(io_context,tcp::endpoint(tcp::v4(),14));
-        // tcp::socket socket_slave2(io_context);
-        // acceptor_slave2.accept(socket_slave2);
+        tcp::acceptor acceptor_slave2(io_context,tcp::endpoint(tcp::v4(),14));
+        tcp::socket socket_slave2(io_context);
+        acceptor_slave2.accept(socket_slave2);
 
         // slave 1 tcp connection management
         string client_name1;
@@ -325,15 +339,15 @@ bool Experiment::informControllers(Trial &t)
         // std::cout << "Messaggio inviato: " << message1 << std::endl;
 
         // slave 2 tcp connection management
-        // string client_name2;
-        // GC::readMessageFromSocket(socket_slave2,client_name2,GC::message_delimiter);
-        // confirmed_controllers.push_back(client_name2);
-        // std::cout << std::endl;
-        // std::cout << "\r> Connection from " << socket_slave2.remote_endpoint().address().to_string() << " named " << client_name2 << "> DONE!"  << std::endl;
-        // // std::copy(confirmed_controllers.begin(), confirmed_controllers.end(), std::ostream_iterator<std::string>(std::cout, " "));
-        // string message2 = ""; // creation of empty message if slave is not needed in this trial
-        // message2=messageTrialJSON(client_name2); // in the form json: { "TRIAL_DURATION": <value>, "STIMULI": [{stim_1},{stim_2},...,{stim_last}]}
-        // GC::writeMessageToSocket(socket_slave2,message2,GC::message_delimiter);
+        string client_name2;
+        GC::readMessageFromSocket(socket_slave2,client_name2,GC::message_delimiter);
+        confirmed_controllers.push_back(client_name2);
+        std::cout << std::endl;
+        std::cout << "\r> Connection from " << socket_slave2.remote_endpoint().address().to_string() << " named " << client_name2 << "> DONE!"  << std::endl;
+        // std::copy(confirmed_controllers.begin(), confirmed_controllers.end(), std::ostream_iterator<std::string>(std::cout, " "));
+        string message2 = ""; // creation of empty message if slave is not needed in this trial
+        message2=messageTrialJSON(client_name2); // in the form json: { "TRIAL_DURATION": <value>, "STIMULI": [{stim_1},{stim_2},...,{stim_last}]}
+        GC::writeMessageToSocket(socket_slave2,message2,GC::message_delimiter);
 
         // std::cout << "Messaggio inviato: " << message2 << std::endl;
     }
