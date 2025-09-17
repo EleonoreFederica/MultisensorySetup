@@ -47,7 +47,7 @@ public:
     private:
     bool pedal_state;
     long lastResponseTime;  // Tempo dell'ultima risposta
-    static const long DEBOUNCE_INTERVAL = 100; // Intervallo di debounce (100 ms)
+    static const long DEBOUNCE_INTERVAL = 200; // Intervallo di debounce (200 ms)
 
 
 };
