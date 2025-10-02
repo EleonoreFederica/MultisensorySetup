@@ -2,88 +2,110 @@ import os
 import random
 import json
 import numpy as np
-from PIL import Image
 
-# === Parametri generali ===
-N_repeats = 500
+# ---------------------------
+# Configurazione (modifica questi valori)
+# ---------------------------
+audio_channels = [6]            # usa solo i canali qui elencati
+target_slaves = ["SLAVE1"]    # usa solo gli slave qui elencati
+visual_dir = "visual cues led matrices"  # cartella con JSON pattern visivi
+
+# ISI: estremo inferiore (incluso) e superiore (escluso) per avere, ad es., 2000 valori
+isi_val_extremes = (1000, 3000)
+isi_values = np.arange(isi_val_extremes[0], isi_val_extremes[1] + 1)
+N_repeats = len(isi_values)
+
+# Parametri stimoli
 onset = 0
 offset = 50  # ms
-freq = 5000  # Hz
+freq = 5000
 d_c = 50
 cycle_offset = 0
-isi_val_extremes = (1000, 1500)  # ms
-isi_val = np.random.randint(isi_val_extremes[0], isi_val_extremes[1] + 1, size=isi_val_extremes[1] - isi_val_extremes[0] + 1)
 
-trial_counter = 1  # per contare da 001 a 7000
+# Se True non salva i JSON dei trial (utile per debug)
+DRY_RUN = False
 
+# Directory di salvataggio
+save_dir = os.path.expanduser("~/Desktop/MultisensorySetup/PsychophysicalInterface-master/testing_trials")
+
+# ---------------------------
+# Carica i pattern visivi (JSON già pronti)
+# Ogni file .json nella cartella può contenere una lista di entries, ognuna con
+# {"CONTROLLER_TARGET": "SLAVE1", "PIXELS": [[x,y,r,g,b], ...]}
+# ---------------------------
+pixel_data_entries = []
+if os.path.exists(visual_dir):
+    for fname in os.listdir(visual_dir):
+        if not fname.lower().endswith('.json'):
+            continue
+        file_path = os.path.join(visual_dir, fname)
+        try:
+            with open(file_path, 'r', encoding='utf-8') as jf:
+                data = json.load(jf)
+                if isinstance(data, list):
+                    for entry in data:
+                        if isinstance(entry, dict) and 'CONTROLLER_TARGET' in entry and 'PIXELS' in entry:
+                            pixel_data_entries.append(entry)
+                        else:
+                            print(f"Skipped malformed entry in {file_path}: {entry}")
+                else:
+                    print(f"Skipped non-list JSON in {file_path}")
+        except Exception as e:
+            print(f"Failed to load visual JSON {file_path}: {e}")
+else:
+    print(f"Warning: visual directory '{visual_dir}' not found.")
+
+# Costruisci mappa slave -> [PIXELS,...]
+pixels_map = {}
+for entry in pixel_data_entries:
+    tgt = entry.get('CONTROLLER_TARGET')
+    pixels_map.setdefault(tgt, []).append(entry.get('PIXELS'))
+
+print(f"Loaded {len(pixel_data_entries)} visual entries. CONTROLLER_TARGETs: {sorted(pixels_map.keys())}")
+
+# ---------------------------
+# Costruzione combinazioni
+# - A: una combinazione per ciascun canale in audio_channels
+# - V: per ciascun slave in target_slaves e per ogni immagine assegnata a quello slave
+# - AV: prodotto cartesiano: per ogni canale audio, per ogni slave configurato, per ogni immagine assegnata a quello slave
+# ---------------------------
 trial_combinations = []
 
-audio_channels = [6, 7, 26, 25]  # 6 dx / 7 sx / 26 destra interna / 25 destra esterna
-target_slaves = ["SLAVE1", "SLAVE2"]
-image_files = [
-    "visual cues led matrices/left_matrix.png",
-    "visual cues led matrices/right_matrix.png"
-]
-
-AV_coherent = True  # True = stimoli AV coerenti, False = coerenza randomizzata
-
-# === Carica pixel immagini ===
-def load_pixels(image_path):
-    img = Image.open(image_path).convert("RGB")
-    img = img.resize((128, 64))
-    pixels = []
-    for y in range(img.height):
-        for x in range(img.width):
-            r, g, b = img.getpixel((x, y))
-            if not (r == 0 and g == 0 and b == 0):
-                pixels.append([x, y, r, g, b])
-    return pixels
-
-pixel_data = [load_pixels(path) for path in image_files]
-
-# Stampa la lunghezza e i primi 5 pixel di ciascuna immagine per verifica
-print('pixel_data[0] (left_matrix): lunghezza =', len(pixel_data[0]))
-print('Esempio pixel:', pixel_data[0][:5])
-print('pixel_data[1] (right_matrix): lunghezza =', len(pixel_data[1]))
-print('Esempio pixel:', pixel_data[1][:5])
-
-# === Costruisci tutte le 14 combinazioni ===
-
-# Mappatura canali audio -> (slave, matrice)
-audio_matrix_map = {
-    25: ("SLAVE1", 0),  # sinistra esterna
-    26: ("SLAVE1", 1),  # sinistra interna
-    6: ("SLAVE2", 1),   # destra esterna
-    7: ("SLAVE2", 0)    # destra interna
-}
-
-# A - solo audio
+# A
 for chan in audio_channels:
     trial_combinations.append(("A", chan, None, None))
 
-# V - solo visivo
+# V
 for slave in target_slaves:
-    for i, pix in enumerate(pixel_data):
-        trial_combinations.append(("V", None, slave, pix))
+    patterns = pixels_map.get(slave, [])
+    if not patterns:
+        print(f"Info: nessun pattern visivo trovato per {slave}; non verranno creati V-only per questo slave.")
+        continue
+    for pixels in patterns:
+        trial_combinations.append(("V", None, slave, pixels))
 
-# AV - combinato (coerenza tra canale audio e matrice)
-if AV_coherent:
-    for chan in audio_channels:
-        slave, matrix_idx = audio_matrix_map[chan]
-        trial_combinations.append(("AV", chan, slave, pixel_data[matrix_idx]))
-else:
-    # Random: per ogni combinazione, associazione random tra canale audio e matrice
+# AV
+for chan in audio_channels:
     for slave in target_slaves:
-        for pix in pixel_data:
-            rand_chan = random.choice(audio_channels)
-            trial_combinations.append(("AV", rand_chan, slave, pix))
+        patterns = pixels_map.get(slave, [])
+        if not patterns:
+            # nessun pattern per questo slave -> non si possono creare AV con questo slave
+            print(f"Info: nessun pattern visivo per {slave}; saltando AV per (chan={chan}, slave={slave}).")
+            continue
+        for pixels in patterns:
+            trial_combinations.append(("AV", chan, slave, pixels))
 
-# === Directory salvataggio ===
+# Conteggi e aspettativa
+from collections import Counter
+counts = Counter([c[0] for c in trial_combinations])
+count_A = counts.get('A', 0)
+count_V = counts.get('V', 0)
+count_AV = counts.get('AV', 0)
+print(f"Combinazioni: A={count_A}, V={count_V}, AV={count_AV}")
+print(f"Numero ISI (N_repeats) = {N_repeats}")
+print(f"Numero totale di trial atteso = ({count_A} + {count_V} + {count_AV}) * {N_repeats} = {(count_A + count_V + count_AV) * N_repeats}")
 
-save_dir = os.path.expanduser("~/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/testing_trials")
-os.makedirs(save_dir, exist_ok=True)
-
-# === Pulizia delle cartelle di salvataggio ===
+# --- Preparazione cartelle (svuota) ---
 def clear_folder(folder_path):
     if os.path.exists(folder_path):
         for filename in os.listdir(folder_path):
@@ -91,18 +113,20 @@ def clear_folder(folder_path):
             if os.path.isfile(file_path):
                 os.remove(file_path)
 
-for subfolder in ["A", "V", "AV", "Mixed"]:
-    folder_path = os.path.join(save_dir, subfolder)
-    clear_folder(folder_path)
+for sub in ["A", "V", "AV", "Mixed"]:
+    d = os.path.join(save_dir, sub)
+    os.makedirs(d, exist_ok=True)
+    clear_folder(d)
 
-# === Generazione 14 × 500 trial ===
+# --- Generazione dei trial: per ogni combinazione, per ogni ISI ---
+trial_counter = 1
 for comb in trial_combinations:
     trial_type, audio_chan, target_slave, pixels = comb
-    for _ in range(N_repeats):
-        isi = np.random.randint(isi_val_extremes[0], isi_val_extremes[1] + 1)
-        trial_duration = offset + isi
-
+    # se vuoi ordine casuale degli ISI usa permutation, altrimenti iterali in ordine
+    for isi in np.random.permutation(isi_values):
+        trial_duration = offset + int(isi)
         trial = {
+            "NAME": None,
             "DURATION": trial_duration,
             "AUDITORY_STIMULI": [],
             "VISUAL_STIMULI": [],
@@ -112,7 +136,6 @@ for comb in trial_combinations:
         name_parts = [f"{trial_counter:04d}_trial", trial_type]
 
         if trial_type in ["A", "AV"]:
-            direction = "right" if audio_chan in [6, 26] else "left"
             trial["AUDITORY_STIMULI"] = [{
                 "CHANNEL": audio_chan,
                 "ONSET": onset,
@@ -121,6 +144,7 @@ for comb in trial_combinations:
                 "DUTY_CYCLE": d_c,
                 "CYCLE_OFFSET": cycle_offset
             }]
+            direction = "right" if audio_chan in [6, 26] else "left"
             name_parts.append(direction)
 
         if trial_type in ["V", "AV"]:
@@ -135,18 +159,19 @@ for comb in trial_combinations:
         name_parts.append(str(trial_duration))
         trial["NAME"] = "_".join(name_parts)
 
-        # Salvataggio in sottocartelle per tipo trial
-        type_dir = os.path.join(save_dir, trial_type)
-        os.makedirs(type_dir, exist_ok=True)
-        file_path_type = os.path.join(type_dir, f"{trial['NAME']}.json")
-        with open(file_path_type, 'w', encoding='utf-8') as f:
-            json.dump(trial, f, ensure_ascii=False, indent=2)
+        if not DRY_RUN:
+            # salva in sottocartella del tipo
+            type_dir = os.path.join(save_dir, trial_type)
+            os.makedirs(type_dir, exist_ok=True)
+            with open(os.path.join(type_dir, f"{trial['NAME']}.json"), 'w', encoding='utf-8') as f:
+                json.dump(trial, f, ensure_ascii=False, indent=2)
 
-        # Salvataggio in cartella Mixed
-        mixed_dir = os.path.join(save_dir, "Mixed")
-        os.makedirs(mixed_dir, exist_ok=True)
-        file_path_mixed = os.path.join(mixed_dir, f"{trial['NAME']}.json")
-        with open(file_path_mixed, 'w', encoding='utf-8') as f:
-            json.dump(trial, f, ensure_ascii=False, indent=2)
+            # salva anche in Mixed
+            mixed_dir = os.path.join(save_dir, "Mixed")
+            os.makedirs(mixed_dir, exist_ok=True)
+            with open(os.path.join(mixed_dir, f"{trial['NAME']}.json"), 'w', encoding='utf-8') as f:
+                json.dump(trial, f, ensure_ascii=False, indent=2)
 
         trial_counter += 1
+
+print(f"Completed. Generated {trial_counter-1} trials (DRY_RUN={DRY_RUN}).")
