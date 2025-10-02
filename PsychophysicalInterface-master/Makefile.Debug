@@ -16,7 +16,7 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++1z -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I. -I../asio-1.30.2/include -I../rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -Idebug -I. -I/include -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ 
+INCPATH       = -I. -I../asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -Idebug -I. -I/include -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
 LIBS        =        -lws2_32 C:\Qt\6.8.0\mingw_64\lib\libQt6Widgets.a C:\Qt\6.8.0\mingw_64\lib\libQt6Gui.a C:\Qt\6.8.0\mingw_64\lib\libQt6Core.a -lmingw32 C:\Qt\6.8.0\mingw_64\lib\libQt6EntryPoint.a -lshell32  
@@ -353,33 +353,12 @@ debug/moc_addadialog.cpp: addadialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		trialstub.h \
 		visualstimulusstub.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/debug/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addadialog.h -o debug\moc_addadialog.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/debug/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addadialog.h -o debug\moc_addadialog.cpp
 
 debug/moc_addvdialog.cpp: addvdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
@@ -576,31 +555,10 @@ debug/moc_addvdialog.cpp: addvdialog.h \
 		trialstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		debug/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/debug/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addvdialog.h -o debug\moc_addvdialog.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/debug/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addvdialog.h -o debug\moc_addvdialog.cpp
 
 debug/moc_edittrialdialog.cpp: edittrialdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
@@ -797,31 +755,10 @@ debug/moc_edittrialdialog.cpp: edittrialdialog.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		debug/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/debug/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include edittrialdialog.h -o debug\moc_edittrialdialog.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/debug/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include edittrialdialog.h -o debug\moc_edittrialdialog.cpp
 
 debug/moc_mainwindow.cpp: mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
@@ -1020,27 +957,6 @@ debug/moc_mainwindow.cpp: mainwindow.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidgetItem \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -1062,7 +978,7 @@ debug/moc_mainwindow.cpp: mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/debug/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/debug/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include mainwindow.h -o debug\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1104,27 +1020,6 @@ debug/ExperimentStub.o: ExperimentStub.cpp ExperimentStub.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -1403,31 +1298,43 @@ debug/addadialog.o: addadialog.cpp addadialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		trialstub.h \
 		visualstimulusstub.h \
-		ui_addadialog.h
+		ui_addadialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QAbstractButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialogButtonBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFrame \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\addadialog.o addadialog.cpp
 
 debug/addvdialog.o: addvdialog.cpp addvdialog.h \
@@ -1625,29 +1532,62 @@ debug/addvdialog.o: addvdialog.cpp addvdialog.h \
 		trialstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		ui_addvdialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QAbstractButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialogButtonBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFrame \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGridLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPlainTextEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qplaintextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qglyphrun.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qrawfont.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qfontdatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/QImage \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qfiledialog.h \
@@ -1663,27 +1603,6 @@ debug/addvdialog.o: addvdialog.cpp addvdialog.h \
 
 debug/auditorystimulusstub.o: auditorystimulusstub.cpp auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -1964,55 +1883,69 @@ debug/edittrialdialog.o: edittrialdialog.cpp edittrialdialog.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		ui_edittrialdialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QAbstractButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialogButtonBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFrame \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGridLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgroupbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidget \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistview.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPlainTextEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qplaintextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qglyphrun.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qrawfont.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qfontdatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		addvdialog.h \
 		addadialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\edittrialdialog.o edittrialdialog.cpp
 
 debug/gc.o: gc.cpp gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -2095,12 +2028,7 @@ debug/gc.o: gc.cpp gc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qiterator.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qbytearraylist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qalgorithms.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringmatcher.h \
-		../rapidjson-master/include/rapidjson/istreamwrapper.h \
-		../rapidjson-master/include/rapidjson/stringbuffer.h \
-		../rapidjson-master/include/rapidjson/writer.h \
-		../rapidjson-master/include/rapidjson/internal/dtoa.h \
-		../rapidjson-master/include/rapidjson/internal/itoa.h
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringmatcher.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\gc.o gc.cpp
 
 debug/main.o: main.cpp mainwindow.h \
@@ -2300,27 +2228,6 @@ debug/main.o: main.cpp mainwindow.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidgetItem \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -2544,27 +2451,6 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidgetItem \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -2585,6 +2471,51 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
 		ui_mainwindow.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDoubleSpinBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGridLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidget \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPlainTextEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qplaintextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qglyphrun.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qrawfont.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qfontdatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		addvdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialog.h \
@@ -2608,146 +2539,121 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/tss_ptr.hpp \
 		../asio-1.30.2/include/asio/detail/null_tss_ptr.hpp \
 		../asio-1.30.2/include/asio/detail/keyword_tss_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/win_tss_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/socket_types.hpp \
-		../asio-1.30.2/include/asio/detail/old_win_sdk_compat.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_tss_ptr.ipp \
-		../asio-1.30.2/include/asio/detail/throw_error.hpp \
-		../asio-1.30.2/include/asio/error_code.hpp \
-		../asio-1.30.2/include/asio/impl/error_code.ipp \
-		../asio-1.30.2/include/asio/detail/local_free_on_block_exit.hpp \
-		../asio-1.30.2/include/asio/detail/impl/throw_error.ipp \
-		../asio-1.30.2/include/asio/system_error.hpp \
-		../asio-1.30.2/include/asio/error.hpp \
-		../asio-1.30.2/include/asio/impl/error.ipp \
 		../asio-1.30.2/include/asio/detail/posix_tss_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/impl/posix_tss_ptr.ipp \
-		../asio-1.30.2/include/asio/detail/impl/thread_context.ipp \
 		../asio-1.30.2/include/asio/detail/thread_info_base.hpp \
 		../asio-1.30.2/include/asio/multiple_exceptions.hpp \
-		../asio-1.30.2/include/asio/impl/multiple_exceptions.ipp \
 		../asio-1.30.2/include/asio/associated_allocator.hpp \
 		../asio-1.30.2/include/asio/associator.hpp \
 		../asio-1.30.2/include/asio/detail/functional.hpp \
 		../asio-1.30.2/include/asio/detail/type_traits.hpp \
 		../asio-1.30.2/include/asio/execution_context.hpp \
-		../asio-1.30.2/include/asio/impl/execution_context.hpp \
-		../asio-1.30.2/include/asio/detail/handler_type_requirements.hpp \
+		../asio-1.30.2/include/asio/execution.hpp \
+		../asio-1.30.2/include/asio/any_completion_handler.hpp \
+		../asio-1.30.2/include/asio/any_io_executor.hpp \
+		../asio-1.30.2/include/asio/associated_cancellation_slot.hpp \
+		../asio-1.30.2/include/asio/cancellation_signal.hpp \
+		../asio-1.30.2/include/asio/cancellation_type.hpp \
+		../asio-1.30.2/include/asio/associated_executor.hpp \
+		../asio-1.30.2/include/asio/is_executor.hpp \
+		../asio-1.30.2/include/asio/detail/is_executor.hpp \
+		../asio-1.30.2/include/asio/system_executor.hpp \
+		../asio-1.30.2/include/asio/associated_immediate_executor.hpp \
+		../asio-1.30.2/include/asio/require.hpp \
+		../asio-1.30.2/include/asio/is_applicable_property.hpp \
+		../asio-1.30.2/include/asio/cancellation_state.hpp \
+		../asio-1.30.2/include/asio/recycling_allocator.hpp \
+		../asio-1.30.2/include/asio/append.hpp \
+		../asio-1.30.2/include/asio/as_tuple.hpp \
 		../asio-1.30.2/include/asio/async_result.hpp \
-		../asio-1.30.2/include/asio/detail/scoped_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/service_registry.hpp \
+		../asio-1.30.2/include/asio/awaitable.hpp \
+		../asio-1.30.2/include/asio/basic_datagram_socket.hpp \
+		../asio-1.30.2/include/asio/basic_socket.hpp \
+		../asio-1.30.2/include/asio/detail/handler_type_requirements.hpp \
+		../asio-1.30.2/include/asio/detail/io_object_impl.hpp \
+		../asio-1.30.2/include/asio/io_context.hpp \
+		../asio-1.30.2/include/asio/detail/chrono.hpp \
+		../asio-1.30.2/include/asio/detail/concurrency_hint.hpp \
+		../asio-1.30.2/include/asio/error_code.hpp \
+		../asio-1.30.2/include/asio/detail/winsock_init.hpp \
+		../asio-1.30.2/include/asio/detail/signal_init.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_io_context.hpp \
+		../asio-1.30.2/include/asio/detail/limits.hpp \
 		../asio-1.30.2/include/asio/detail/mutex.hpp \
 		../asio-1.30.2/include/asio/detail/null_mutex.hpp \
 		../asio-1.30.2/include/asio/detail/scoped_lock.hpp \
-		../asio-1.30.2/include/asio/detail/win_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_mutex.ipp \
 		../asio-1.30.2/include/asio/detail/posix_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/impl/posix_mutex.ipp \
 		../asio-1.30.2/include/asio/detail/std_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/impl/service_registry.hpp \
-		../asio-1.30.2/include/asio/detail/impl/service_registry.ipp \
-		../asio-1.30.2/include/asio/impl/execution_context.ipp \
-		../asio-1.30.2/include/asio/impl/executor.hpp \
-		../asio-1.30.2/include/asio/detail/atomic_count.hpp \
-		../asio-1.30.2/include/asio/detail/global.hpp \
-		../asio-1.30.2/include/asio/detail/null_global.hpp \
-		../asio-1.30.2/include/asio/detail/win_global.hpp \
-		../asio-1.30.2/include/asio/detail/static_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/null_static_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/win_static_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_static_mutex.ipp \
-		../asio-1.30.2/include/asio/detail/posix_static_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/std_static_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/posix_global.hpp \
-		../asio-1.30.2/include/asio/detail/std_global.hpp \
-		../asio-1.30.2/include/asio/system_executor.hpp \
-		../asio-1.30.2/include/asio/execution.hpp \
-		../asio-1.30.2/include/asio/execution/allocator.hpp \
-		../asio-1.30.2/include/asio/execution/executor.hpp \
-		../asio-1.30.2/include/asio/execution/invocable_archetype.hpp \
-		../asio-1.30.2/include/asio/traits/equality_comparable.hpp \
-		../asio-1.30.2/include/asio/traits/execute_member.hpp \
-		../asio-1.30.2/include/asio/is_applicable_property.hpp \
-		../asio-1.30.2/include/asio/traits/query_static_constexpr_member.hpp \
-		../asio-1.30.2/include/asio/traits/static_query.hpp \
-		../asio-1.30.2/include/asio/execution/any_executor.hpp \
-		../asio-1.30.2/include/asio/detail/assert.hpp \
-		../asio-1.30.2/include/asio/detail/non_const_lvalue.hpp \
-		../asio-1.30.2/include/asio/execution/bad_executor.hpp \
-		../asio-1.30.2/include/asio/execution/impl/bad_executor.ipp \
-		../asio-1.30.2/include/asio/execution/blocking.hpp \
-		../asio-1.30.2/include/asio/prefer.hpp \
-		../asio-1.30.2/include/asio/traits/prefer_free.hpp \
-		../asio-1.30.2/include/asio/traits/prefer_member.hpp \
-		../asio-1.30.2/include/asio/traits/require_free.hpp \
-		../asio-1.30.2/include/asio/traits/require_member.hpp \
-		../asio-1.30.2/include/asio/traits/static_require.hpp \
-		../asio-1.30.2/include/asio/query.hpp \
-		../asio-1.30.2/include/asio/traits/query_member.hpp \
-		../asio-1.30.2/include/asio/traits/query_free.hpp \
-		../asio-1.30.2/include/asio/require.hpp \
-		../asio-1.30.2/include/asio/execution/blocking_adaptation.hpp \
-		../asio-1.30.2/include/asio/detail/event.hpp \
-		../asio-1.30.2/include/asio/detail/null_event.hpp \
-		../asio-1.30.2/include/asio/detail/impl/null_event.ipp \
-		../asio-1.30.2/include/asio/detail/win_event.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_event.ipp \
-		../asio-1.30.2/include/asio/detail/posix_event.hpp \
-		../asio-1.30.2/include/asio/detail/impl/posix_event.ipp \
-		../asio-1.30.2/include/asio/detail/std_event.hpp \
-		../asio-1.30.2/include/asio/execution/context.hpp \
-		../asio-1.30.2/include/asio/execution/context_as.hpp \
-		../asio-1.30.2/include/asio/execution/mapping.hpp \
-		../asio-1.30.2/include/asio/execution/occupancy.hpp \
-		../asio-1.30.2/include/asio/execution/outstanding_work.hpp \
-		../asio-1.30.2/include/asio/execution/prefer_only.hpp \
-		../asio-1.30.2/include/asio/execution/relationship.hpp \
-		../asio-1.30.2/include/asio/impl/system_executor.hpp \
-		../asio-1.30.2/include/asio/detail/executor_op.hpp \
-		../asio-1.30.2/include/asio/detail/fenced_block.hpp \
-		../asio-1.30.2/include/asio/detail/null_fenced_block.hpp \
-		../asio-1.30.2/include/asio/detail/std_fenced_block.hpp \
-		../asio-1.30.2/include/asio/detail/scheduler_operation.hpp \
-		../asio-1.30.2/include/asio/detail/handler_tracking.hpp \
-		../asio-1.30.2/include/asio/detail/impl/handler_tracking.ipp \
-		../asio-1.30.2/include/asio/time_traits.hpp \
-		../asio-1.30.2/include/asio/detail/chrono.hpp \
-		../asio-1.30.2/include/asio/detail/chrono_time_traits.hpp \
-		../asio-1.30.2/include/asio/wait_traits.hpp \
 		../asio-1.30.2/include/asio/detail/op_queue.hpp \
-		../asio-1.30.2/include/asio/system_context.hpp \
-		../asio-1.30.2/include/asio/detail/scheduler.hpp \
-		../asio-1.30.2/include/asio/detail/conditionally_enabled_event.hpp \
-		../asio-1.30.2/include/asio/detail/conditionally_enabled_mutex.hpp \
-		../asio-1.30.2/include/asio/detail/scheduler_task.hpp \
+		../asio-1.30.2/include/asio/detail/scoped_ptr.hpp \
+		../asio-1.30.2/include/asio/detail/socket_types.hpp \
+		../asio-1.30.2/include/asio/detail/old_win_sdk_compat.hpp \
 		../asio-1.30.2/include/asio/detail/thread.hpp \
 		../asio-1.30.2/include/asio/detail/null_thread.hpp \
+		../asio-1.30.2/include/asio/detail/throw_error.hpp \
+		../asio-1.30.2/include/asio/error.hpp \
+		../asio-1.30.2/include/asio/system_error.hpp \
 		../asio-1.30.2/include/asio/detail/posix_thread.hpp \
-		../asio-1.30.2/include/asio/detail/impl/posix_thread.ipp \
 		../asio-1.30.2/include/asio/detail/wince_thread.hpp \
 		../asio-1.30.2/include/asio/detail/winapp_thread.hpp \
 		../asio-1.30.2/include/asio/detail/win_thread.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_thread.ipp \
 		../asio-1.30.2/include/asio/detail/std_thread.hpp \
-		../asio-1.30.2/include/asio/detail/impl/scheduler.ipp \
-		../asio-1.30.2/include/asio/detail/concurrency_hint.hpp \
-		../asio-1.30.2/include/asio/detail/limits.hpp \
-		../asio-1.30.2/include/asio/detail/scheduler_thread_info.hpp \
-		../asio-1.30.2/include/asio/detail/signal_blocker.hpp \
-		../asio-1.30.2/include/asio/detail/null_signal_blocker.hpp \
-		../asio-1.30.2/include/asio/detail/posix_signal_blocker.hpp \
-		../asio-1.30.2/include/asio/detail/io_uring_service.hpp \
-		../asio-1.30.2/include/asio/detail/buffer_sequence_adapter.hpp \
+		../asio-1.30.2/include/asio/detail/timer_queue_base.hpp \
+		../asio-1.30.2/include/asio/detail/operation.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_operation.hpp \
+		../asio-1.30.2/include/asio/detail/handler_tracking.hpp \
+		../asio-1.30.2/include/asio/detail/static_mutex.hpp \
+		../asio-1.30.2/include/asio/detail/null_static_mutex.hpp \
+		../asio-1.30.2/include/asio/detail/win_static_mutex.hpp \
+		../asio-1.30.2/include/asio/detail/posix_static_mutex.hpp \
+		../asio-1.30.2/include/asio/detail/std_static_mutex.hpp \
+		../asio-1.30.2/include/asio/detail/scheduler_operation.hpp \
+		../asio-1.30.2/include/asio/detail/timer_queue_set.hpp \
+		../asio-1.30.2/include/asio/detail/wait_op.hpp \
+		../asio-1.30.2/include/asio/detail/scheduler.hpp \
+		../asio-1.30.2/include/asio/detail/atomic_count.hpp \
+		../asio-1.30.2/include/asio/detail/conditionally_enabled_event.hpp \
+		../asio-1.30.2/include/asio/detail/conditionally_enabled_mutex.hpp \
+		../asio-1.30.2/include/asio/detail/event.hpp \
+		../asio-1.30.2/include/asio/detail/null_event.hpp \
+		../asio-1.30.2/include/asio/detail/win_event.hpp \
+		../asio-1.30.2/include/asio/detail/assert.hpp \
+		../asio-1.30.2/include/asio/detail/posix_event.hpp \
+		../asio-1.30.2/include/asio/detail/std_event.hpp \
+		../asio-1.30.2/include/asio/detail/scheduler_task.hpp \
+		../asio-1.30.2/include/asio/io_context_strand.hpp \
+		../asio-1.30.2/include/asio/detail/strand_service.hpp \
+		../asio-1.30.2/include/asio/detail/wrapped_handler.hpp \
+		../asio-1.30.2/include/asio/detail/bind_handler.hpp \
+		../asio-1.30.2/include/asio/detail/handler_cont_helpers.hpp \
+		../asio-1.30.2/include/asio/handler_continuation_hook.hpp \
+		../asio-1.30.2/include/asio/query.hpp \
+		../asio-1.30.2/include/asio/detail/non_const_lvalue.hpp \
+		../asio-1.30.2/include/asio/post.hpp \
+		../asio-1.30.2/include/asio/detail/initiate_post.hpp \
+		../asio-1.30.2/include/asio/detail/work_dispatcher.hpp \
+		../asio-1.30.2/include/asio/executor_work_guard.hpp \
+		../asio-1.30.2/include/asio/prefer.hpp \
+		../asio-1.30.2/include/asio/socket_base.hpp \
+		../asio-1.30.2/include/asio/detail/io_control.hpp \
+		../asio-1.30.2/include/asio/detail/socket_option.hpp \
+		../asio-1.30.2/include/asio/detail/null_socket_service.hpp \
 		../asio-1.30.2/include/asio/buffer.hpp \
 		../asio-1.30.2/include/asio/detail/array_fwd.hpp \
 		../asio-1.30.2/include/asio/detail/string_view.hpp \
 		../asio-1.30.2/include/asio/is_contiguous_iterator.hpp \
 		../asio-1.30.2/include/asio/detail/is_buffer_sequence.hpp \
+		../asio-1.30.2/include/asio/detail/io_uring_socket_service.hpp \
+		../asio-1.30.2/include/asio/detail/buffer_sequence_adapter.hpp \
 		../asio-1.30.2/include/asio/registered_buffer.hpp \
 		../asio-1.30.2/include/asio/detail/impl/buffer_sequence_adapter.ipp \
+		../asio-1.30.2/include/asio/detail/io_uring_null_buffers_op.hpp \
+		../asio-1.30.2/include/asio/detail/fenced_block.hpp \
+		../asio-1.30.2/include/asio/detail/null_fenced_block.hpp \
+		../asio-1.30.2/include/asio/detail/std_fenced_block.hpp \
+		../asio-1.30.2/include/asio/detail/handler_work.hpp \
+		../asio-1.30.2/include/asio/detail/initiate_dispatch.hpp \
 		../asio-1.30.2/include/asio/detail/io_uring_operation.hpp \
-		../asio-1.30.2/include/asio/detail/operation.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_operation.hpp \
+		../asio-1.30.2/include/asio/detail/io_uring_service.hpp \
 		../asio-1.30.2/include/asio/detail/object_pool.hpp \
 		../asio-1.30.2/include/asio/detail/reactor.hpp \
 		../asio-1.30.2/include/asio/detail/null_reactor.hpp \
@@ -2763,10 +2669,6 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/impl/eventfd_select_interrupter.ipp \
 		../asio-1.30.2/include/asio/detail/pipe_select_interrupter.hpp \
 		../asio-1.30.2/include/asio/detail/impl/pipe_select_interrupter.ipp \
-		../asio-1.30.2/include/asio/detail/timer_queue_base.hpp \
-		../asio-1.30.2/include/asio/detail/timer_queue_set.hpp \
-		../asio-1.30.2/include/asio/detail/impl/timer_queue_set.ipp \
-		../asio-1.30.2/include/asio/detail/wait_op.hpp \
 		../asio-1.30.2/include/asio/detail/impl/epoll_reactor.hpp \
 		../asio-1.30.2/include/asio/detail/impl/epoll_reactor.ipp \
 		../asio-1.30.2/include/asio/detail/kqueue_reactor.hpp \
@@ -2782,81 +2684,12 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/posix_fd_set_adapter.hpp \
 		../asio-1.30.2/include/asio/detail/win_fd_set_adapter.hpp \
 		../asio-1.30.2/include/asio/detail/impl/select_reactor.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_io_context.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_thread_info.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_iocp_io_context.hpp \
-		../asio-1.30.2/include/asio/detail/completion_handler.hpp \
-		../asio-1.30.2/include/asio/detail/handler_work.hpp \
-		../asio-1.30.2/include/asio/associated_executor.hpp \
-		../asio-1.30.2/include/asio/is_executor.hpp \
-		../asio-1.30.2/include/asio/detail/is_executor.hpp \
-		../asio-1.30.2/include/asio/associated_immediate_executor.hpp \
-		../asio-1.30.2/include/asio/detail/initiate_dispatch.hpp \
-		../asio-1.30.2/include/asio/detail/work_dispatcher.hpp \
-		../asio-1.30.2/include/asio/detail/bind_handler.hpp \
-		../asio-1.30.2/include/asio/detail/handler_cont_helpers.hpp \
-		../asio-1.30.2/include/asio/handler_continuation_hook.hpp \
-		../asio-1.30.2/include/asio/executor_work_guard.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_iocp_io_context.ipp \
 		../asio-1.30.2/include/asio/detail/impl/select_reactor.ipp \
+		../asio-1.30.2/include/asio/detail/signal_blocker.hpp \
+		../asio-1.30.2/include/asio/detail/null_signal_blocker.hpp \
+		../asio-1.30.2/include/asio/detail/posix_signal_blocker.hpp \
 		../asio-1.30.2/include/asio/detail/impl/io_uring_service.hpp \
 		../asio-1.30.2/include/asio/detail/impl/io_uring_service.ipp \
-		../asio-1.30.2/include/asio/detail/thread_group.hpp \
-		../asio-1.30.2/include/asio/impl/system_context.hpp \
-		../asio-1.30.2/include/asio/impl/system_context.ipp \
-		../asio-1.30.2/include/asio/impl/executor.ipp \
-		../asio-1.30.2/include/asio/impl/any_completion_executor.ipp \
-		../asio-1.30.2/include/asio/any_completion_handler.hpp \
-		../asio-1.30.2/include/asio/any_io_executor.hpp \
-		../asio-1.30.2/include/asio/impl/any_io_executor.ipp \
-		../asio-1.30.2/include/asio/associated_cancellation_slot.hpp \
-		../asio-1.30.2/include/asio/cancellation_signal.hpp \
-		../asio-1.30.2/include/asio/cancellation_type.hpp \
-		../asio-1.30.2/include/asio/impl/cancellation_signal.ipp \
-		../asio-1.30.2/include/asio/cancellation_state.hpp \
-		../asio-1.30.2/include/asio/recycling_allocator.hpp \
-		../asio-1.30.2/include/asio/append.hpp \
-		../asio-1.30.2/include/asio/impl/append.hpp \
-		../asio-1.30.2/include/asio/detail/utility.hpp \
-		../asio-1.30.2/include/asio/as_tuple.hpp \
-		../asio-1.30.2/include/asio/impl/as_tuple.hpp \
-		../asio-1.30.2/include/asio/awaitable.hpp \
-		../asio-1.30.2/include/asio/impl/awaitable.hpp \
-		../asio-1.30.2/include/asio/post.hpp \
-		../asio-1.30.2/include/asio/detail/initiate_post.hpp \
-		../asio-1.30.2/include/asio/this_coro.hpp \
-		../asio-1.30.2/include/asio/detail/source_location.hpp \
-		../asio-1.30.2/include/asio/basic_datagram_socket.hpp \
-		../asio-1.30.2/include/asio/basic_socket.hpp \
-		../asio-1.30.2/include/asio/detail/io_object_impl.hpp \
-		../asio-1.30.2/include/asio/io_context.hpp \
-		../asio-1.30.2/include/asio/detail/wrapped_handler.hpp \
-		../asio-1.30.2/include/asio/detail/winsock_init.hpp \
-		../asio-1.30.2/include/asio/detail/impl/winsock_init.ipp \
-		../asio-1.30.2/include/asio/detail/signal_init.hpp \
-		../asio-1.30.2/include/asio/impl/io_context.hpp \
-		../asio-1.30.2/include/asio/impl/io_context.ipp \
-		../asio-1.30.2/include/asio/io_context_strand.hpp \
-		../asio-1.30.2/include/asio/detail/strand_service.hpp \
-		../asio-1.30.2/include/asio/detail/impl/strand_service.hpp \
-		../asio-1.30.2/include/asio/detail/impl/strand_service.ipp \
-		../asio-1.30.2/include/asio/socket_base.hpp \
-		../asio-1.30.2/include/asio/detail/io_control.hpp \
-		../asio-1.30.2/include/asio/detail/socket_option.hpp \
-		../asio-1.30.2/include/asio/detail/null_socket_service.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_service.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_null_buffers_op.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_accept_op.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_service_base.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_connect_op.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_send_op.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_recv_op.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_recvmsg_op.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_wait_op.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_iocp_socket_service_base.ipp \
-		../asio-1.30.2/include/asio/detail/win_iocp_socket_recvfrom_op.hpp \
-		../asio-1.30.2/include/asio/detail/io_uring_socket_service.hpp \
-		../asio-1.30.2/include/asio/detail/io_uring_null_buffers_op.hpp \
 		../asio-1.30.2/include/asio/detail/io_uring_socket_accept_op.hpp \
 		../asio-1.30.2/include/asio/detail/io_uring_socket_connect_op.hpp \
 		../asio-1.30.2/include/asio/detail/io_uring_socket_recvfrom_op.hpp \
@@ -2884,6 +2717,7 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/timer_queue.hpp \
 		../asio-1.30.2/include/asio/detail/date_time_fwd.hpp \
 		../asio-1.30.2/include/asio/detail/timer_queue_ptime.hpp \
+		../asio-1.30.2/include/asio/time_traits.hpp \
 		../asio-1.30.2/include/asio/detail/impl/timer_queue_ptime.ipp \
 		../asio-1.30.2/include/asio/detail/timer_scheduler.hpp \
 		../asio-1.30.2/include/asio/detail/timer_scheduler_fwd.hpp \
@@ -2907,7 +2741,6 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/io_uring_descriptor_read_op.hpp \
 		../asio-1.30.2/include/asio/detail/io_uring_descriptor_write_at_op.hpp \
 		../asio-1.30.2/include/asio/detail/io_uring_descriptor_write_op.hpp \
-		../asio-1.30.2/include/asio/posix/descriptor_base.hpp \
 		../asio-1.30.2/include/asio/detail/impl/io_uring_descriptor_service.ipp \
 		../asio-1.30.2/include/asio/detail/impl/io_uring_file_service.ipp \
 		../asio-1.30.2/include/asio/basic_io_object.hpp \
@@ -2917,13 +2750,13 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/reactive_descriptor_service.hpp \
 		../asio-1.30.2/include/asio/detail/descriptor_read_op.hpp \
 		../asio-1.30.2/include/asio/dispatch.hpp \
+		../asio-1.30.2/include/asio/execution/executor.hpp \
+		../asio-1.30.2/include/asio/execution/invocable_archetype.hpp \
 		../asio-1.30.2/include/asio/detail/descriptor_write_op.hpp \
 		../asio-1.30.2/include/asio/detail/impl/reactive_descriptor_service.ipp \
 		../asio-1.30.2/include/asio/basic_seq_packet_socket.hpp \
 		../asio-1.30.2/include/asio/basic_serial_port.hpp \
 		../asio-1.30.2/include/asio/serial_port_base.hpp \
-		../asio-1.30.2/include/asio/impl/serial_port_base.hpp \
-		../asio-1.30.2/include/asio/impl/serial_port_base.ipp \
 		../asio-1.30.2/include/asio/detail/win_iocp_serial_port_service.hpp \
 		../asio-1.30.2/include/asio/detail/impl/win_iocp_serial_port_service.ipp \
 		../asio-1.30.2/include/asio/detail/posix_serial_port_service.hpp \
@@ -2935,11 +2768,24 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/signal_op.hpp \
 		../asio-1.30.2/include/asio/detail/impl/signal_set_service.ipp \
 		../asio-1.30.2/include/asio/basic_socket_acceptor.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_service.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_null_buffers_op.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_accept_op.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_service_base.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_connect_op.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_send_op.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_recv_op.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_recvmsg_op.hpp \
+		../asio-1.30.2/include/asio/detail/win_iocp_wait_op.hpp \
+		../asio-1.30.2/include/asio/detail/impl/win_iocp_socket_service_base.ipp \
+		../asio-1.30.2/include/asio/detail/win_iocp_socket_recvfrom_op.hpp \
 		../asio-1.30.2/include/asio/basic_socket_iostream.hpp \
 		../asio-1.30.2/include/asio/basic_socket_streambuf.hpp \
 		../asio-1.30.2/include/asio/basic_stream_socket.hpp \
 		../asio-1.30.2/include/asio/steady_timer.hpp \
 		../asio-1.30.2/include/asio/basic_waitable_timer.hpp \
+		../asio-1.30.2/include/asio/detail/chrono_time_traits.hpp \
+		../asio-1.30.2/include/asio/wait_traits.hpp \
 		../asio-1.30.2/include/asio/basic_stream_file.hpp \
 		../asio-1.30.2/include/asio/basic_streambuf.hpp \
 		../asio-1.30.2/include/asio/basic_streambuf_fwd.hpp \
@@ -2950,176 +2796,76 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/uses_executor.hpp \
 		../asio-1.30.2/include/asio/bind_immediate_executor.hpp \
 		../asio-1.30.2/include/asio/buffer_registration.hpp \
+		../asio-1.30.2/include/asio/execution/context.hpp \
 		../asio-1.30.2/include/asio/buffered_read_stream_fwd.hpp \
 		../asio-1.30.2/include/asio/buffered_read_stream.hpp \
 		../asio-1.30.2/include/asio/detail/buffer_resize_guard.hpp \
 		../asio-1.30.2/include/asio/detail/buffered_stream_storage.hpp \
-		../asio-1.30.2/include/asio/impl/buffered_read_stream.hpp \
 		../asio-1.30.2/include/asio/buffered_stream_fwd.hpp \
 		../asio-1.30.2/include/asio/buffered_stream.hpp \
 		../asio-1.30.2/include/asio/buffered_write_stream.hpp \
 		../asio-1.30.2/include/asio/buffered_write_stream_fwd.hpp \
 		../asio-1.30.2/include/asio/completion_condition.hpp \
 		../asio-1.30.2/include/asio/write.hpp \
-		../asio-1.30.2/include/asio/impl/write.hpp \
-		../asio-1.30.2/include/asio/detail/base_from_cancellation_state.hpp \
-		../asio-1.30.2/include/asio/detail/base_from_completion_cond.hpp \
-		../asio-1.30.2/include/asio/detail/consuming_buffers.hpp \
-		../asio-1.30.2/include/asio/detail/dependent_type.hpp \
-		../asio-1.30.2/include/asio/impl/buffered_write_stream.hpp \
 		../asio-1.30.2/include/asio/buffers_iterator.hpp \
 		../asio-1.30.2/include/asio/co_spawn.hpp \
-		../asio-1.30.2/include/asio/impl/co_spawn.hpp \
-		../asio-1.30.2/include/asio/use_awaitable.hpp \
-		../asio-1.30.2/include/asio/impl/use_awaitable.hpp \
 		../asio-1.30.2/include/asio/compose.hpp \
+		../asio-1.30.2/include/asio/detail/base_from_cancellation_state.hpp \
 		../asio-1.30.2/include/asio/detail/composed_work.hpp \
+		../asio-1.30.2/include/asio/execution/outstanding_work.hpp \
 		../asio-1.30.2/include/asio/connect.hpp \
-		../asio-1.30.2/include/asio/impl/connect.hpp \
 		../asio-1.30.2/include/asio/connect_pipe.hpp \
-		../asio-1.30.2/include/asio/impl/connect_pipe.hpp \
-		../asio-1.30.2/include/asio/impl/connect_pipe.ipp \
 		../asio-1.30.2/include/asio/consign.hpp \
-		../asio-1.30.2/include/asio/impl/consign.hpp \
 		../asio-1.30.2/include/asio/coroutine.hpp \
 		../asio-1.30.2/include/asio/deadline_timer.hpp \
 		../asio-1.30.2/include/asio/defer.hpp \
 		../asio-1.30.2/include/asio/detail/initiate_defer.hpp \
+		../asio-1.30.2/include/asio/execution/allocator.hpp \
+		../asio-1.30.2/include/asio/execution/blocking.hpp \
+		../asio-1.30.2/include/asio/execution/relationship.hpp \
 		../asio-1.30.2/include/asio/deferred.hpp \
-		../asio-1.30.2/include/asio/impl/deferred.hpp \
+		../asio-1.30.2/include/asio/detail/utility.hpp \
 		../asio-1.30.2/include/asio/detached.hpp \
-		../asio-1.30.2/include/asio/impl/detached.hpp \
-		../asio-1.30.2/include/asio/generic/basic_endpoint.hpp \
-		../asio-1.30.2/include/asio/generic/detail/endpoint.hpp \
-		../asio-1.30.2/include/asio/generic/detail/impl/endpoint.ipp \
-		../asio-1.30.2/include/asio/generic/datagram_protocol.hpp \
-		../asio-1.30.2/include/asio/generic/raw_protocol.hpp \
-		../asio-1.30.2/include/asio/generic/seq_packet_protocol.hpp \
-		../asio-1.30.2/include/asio/generic/stream_protocol.hpp \
 		../asio-1.30.2/include/asio/high_resolution_timer.hpp \
 		../asio-1.30.2/include/asio/io_service.hpp \
 		../asio-1.30.2/include/asio/io_service_strand.hpp \
-		../asio-1.30.2/include/asio/ip/address.hpp \
-		../asio-1.30.2/include/asio/ip/address_v4.hpp \
-		../asio-1.30.2/include/asio/detail/array.hpp \
-		../asio-1.30.2/include/asio/ip/impl/address_v4.hpp \
-		../asio-1.30.2/include/asio/ip/impl/address_v4.ipp \
-		../asio-1.30.2/include/asio/ip/address_v6.hpp \
-		../asio-1.30.2/include/asio/ip/impl/address_v6.hpp \
-		../asio-1.30.2/include/asio/ip/impl/address_v6.ipp \
-		../asio-1.30.2/include/asio/ip/bad_address_cast.hpp \
-		../asio-1.30.2/include/asio/ip/impl/address.hpp \
-		../asio-1.30.2/include/asio/ip/impl/address.ipp \
-		../asio-1.30.2/include/asio/ip/address_v4_iterator.hpp \
-		../asio-1.30.2/include/asio/ip/address_v4_range.hpp \
-		../asio-1.30.2/include/asio/ip/address_v6_iterator.hpp \
-		../asio-1.30.2/include/asio/ip/address_v6_range.hpp \
-		../asio-1.30.2/include/asio/ip/network_v4.hpp \
-		../asio-1.30.2/include/asio/ip/impl/network_v4.hpp \
-		../asio-1.30.2/include/asio/ip/impl/network_v4.ipp \
-		../asio-1.30.2/include/asio/ip/network_v6.hpp \
-		../asio-1.30.2/include/asio/ip/impl/network_v6.hpp \
-		../asio-1.30.2/include/asio/ip/impl/network_v6.ipp \
-		../asio-1.30.2/include/asio/ip/basic_endpoint.hpp \
-		../asio-1.30.2/include/asio/ip/detail/endpoint.hpp \
-		../asio-1.30.2/include/asio/ip/detail/impl/endpoint.ipp \
-		../asio-1.30.2/include/asio/ip/impl/basic_endpoint.hpp \
-		../asio-1.30.2/include/asio/ip/basic_resolver.hpp \
-		../asio-1.30.2/include/asio/ip/basic_resolver_iterator.hpp \
-		../asio-1.30.2/include/asio/ip/basic_resolver_entry.hpp \
-		../asio-1.30.2/include/asio/detail/winrt_utils.hpp \
-		../asio-1.30.2/include/asio/ip/basic_resolver_query.hpp \
-		../asio-1.30.2/include/asio/ip/resolver_query_base.hpp \
-		../asio-1.30.2/include/asio/ip/resolver_base.hpp \
-		../asio-1.30.2/include/asio/ip/basic_resolver_results.hpp \
-		../asio-1.30.2/include/asio/detail/winrt_resolver_service.hpp \
-		../asio-1.30.2/include/asio/detail/winrt_async_manager.hpp \
-		../asio-1.30.2/include/asio/detail/winrt_async_op.hpp \
-		../asio-1.30.2/include/asio/detail/winrt_resolve_op.hpp \
-		../asio-1.30.2/include/asio/detail/resolver_service.hpp \
-		../asio-1.30.2/include/asio/detail/resolve_endpoint_op.hpp \
-		../asio-1.30.2/include/asio/detail/resolve_op.hpp \
-		../asio-1.30.2/include/asio/detail/resolve_query_op.hpp \
-		../asio-1.30.2/include/asio/detail/resolver_service_base.hpp \
-		../asio-1.30.2/include/asio/detail/impl/resolver_service_base.ipp \
-		../asio-1.30.2/include/asio/ip/host_name.hpp \
-		../asio-1.30.2/include/asio/ip/impl/host_name.ipp \
-		../asio-1.30.2/include/asio/ip/icmp.hpp \
-		../asio-1.30.2/include/asio/ip/multicast.hpp \
-		../asio-1.30.2/include/asio/ip/detail/socket_option.hpp \
-		../asio-1.30.2/include/asio/ip/tcp.hpp \
-		../asio-1.30.2/include/asio/ip/udp.hpp \
-		../asio-1.30.2/include/asio/ip/unicast.hpp \
-		../asio-1.30.2/include/asio/ip/v6_only.hpp \
 		../asio-1.30.2/include/asio/is_read_buffered.hpp \
 		../asio-1.30.2/include/asio/is_write_buffered.hpp \
-		../asio-1.30.2/include/asio/local/basic_endpoint.hpp \
-		../asio-1.30.2/include/asio/local/detail/endpoint.hpp \
-		../asio-1.30.2/include/asio/local/detail/impl/endpoint.ipp \
-		../asio-1.30.2/include/asio/local/connect_pair.hpp \
-		../asio-1.30.2/include/asio/local/datagram_protocol.hpp \
-		../asio-1.30.2/include/asio/local/seq_packet_protocol.hpp \
-		../asio-1.30.2/include/asio/local/stream_protocol.hpp \
 		../asio-1.30.2/include/asio/packaged_task.hpp \
 		../asio-1.30.2/include/asio/detail/future.hpp \
 		../asio-1.30.2/include/asio/placeholders.hpp \
-		../asio-1.30.2/include/asio/posix/basic_descriptor.hpp \
-		../asio-1.30.2/include/asio/posix/basic_stream_descriptor.hpp \
-		../asio-1.30.2/include/asio/posix/descriptor.hpp \
-		../asio-1.30.2/include/asio/posix/stream_descriptor.hpp \
 		../asio-1.30.2/include/asio/prepend.hpp \
-		../asio-1.30.2/include/asio/impl/prepend.hpp \
 		../asio-1.30.2/include/asio/random_access_file.hpp \
 		../asio-1.30.2/include/asio/read.hpp \
-		../asio-1.30.2/include/asio/impl/read.hpp \
 		../asio-1.30.2/include/asio/read_at.hpp \
-		../asio-1.30.2/include/asio/impl/read_at.hpp \
 		../asio-1.30.2/include/asio/read_until.hpp \
 		../asio-1.30.2/include/asio/detail/regex_fwd.hpp \
-		../asio-1.30.2/include/asio/impl/read_until.hpp \
 		../asio-1.30.2/include/asio/readable_pipe.hpp \
 		../asio-1.30.2/include/asio/redirect_error.hpp \
-		../asio-1.30.2/include/asio/impl/redirect_error.hpp \
 		../asio-1.30.2/include/asio/require_concept.hpp \
-		../asio-1.30.2/include/asio/traits/require_concept_member.hpp \
-		../asio-1.30.2/include/asio/traits/require_concept_free.hpp \
-		../asio-1.30.2/include/asio/traits/static_require_concept.hpp \
 		../asio-1.30.2/include/asio/serial_port.hpp \
 		../asio-1.30.2/include/asio/signal_set.hpp \
 		../asio-1.30.2/include/asio/static_thread_pool.hpp \
 		../asio-1.30.2/include/asio/thread_pool.hpp \
-		../asio-1.30.2/include/asio/impl/thread_pool.hpp \
-		../asio-1.30.2/include/asio/detail/blocking_executor_op.hpp \
-		../asio-1.30.2/include/asio/impl/thread_pool.ipp \
+		../asio-1.30.2/include/asio/detail/thread_group.hpp \
 		../asio-1.30.2/include/asio/strand.hpp \
 		../asio-1.30.2/include/asio/detail/strand_executor_service.hpp \
+		../asio-1.30.2/include/asio/detail/executor_op.hpp \
 		../asio-1.30.2/include/asio/detail/impl/strand_executor_service.hpp \
 		../asio-1.30.2/include/asio/detail/impl/strand_executor_service.ipp \
 		../asio-1.30.2/include/asio/stream_file.hpp \
 		../asio-1.30.2/include/asio/streambuf.hpp \
+		../asio-1.30.2/include/asio/system_context.hpp \
 		../asio-1.30.2/include/asio/system_timer.hpp \
+		../asio-1.30.2/include/asio/this_coro.hpp \
 		../asio-1.30.2/include/asio/thread.hpp \
+		../asio-1.30.2/include/asio/use_awaitable.hpp \
+		../asio-1.30.2/include/asio/detail/source_location.hpp \
 		../asio-1.30.2/include/asio/use_future.hpp \
-		../asio-1.30.2/include/asio/impl/use_future.hpp \
 		../asio-1.30.2/include/asio/version.hpp \
-		../asio-1.30.2/include/asio/windows/basic_object_handle.hpp \
-		../asio-1.30.2/include/asio/detail/win_object_handle_service.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_object_handle_service.ipp \
-		../asio-1.30.2/include/asio/windows/basic_overlapped_handle.hpp \
-		../asio-1.30.2/include/asio/windows/basic_random_access_handle.hpp \
-		../asio-1.30.2/include/asio/windows/basic_stream_handle.hpp \
-		../asio-1.30.2/include/asio/windows/object_handle.hpp \
-		../asio-1.30.2/include/asio/windows/overlapped_handle.hpp \
-		../asio-1.30.2/include/asio/windows/overlapped_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_overlapped_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_overlapped_op.hpp \
-		../asio-1.30.2/include/asio/windows/random_access_handle.hpp \
-		../asio-1.30.2/include/asio/windows/stream_handle.hpp \
 		../asio-1.30.2/include/asio/writable_pipe.hpp \
 		../asio-1.30.2/include/asio/write_at.hpp \
-		../asio-1.30.2/include/asio/impl/write_at.hpp \
 		edittrialdialog.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qfiledialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qdir.h \
@@ -3146,27 +2892,6 @@ debug/trialstub.o: trialstub.cpp trialstub.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -3254,27 +2979,6 @@ debug/trialstub.o: trialstub.cpp trialstub.h \
 
 debug/visualstimulusstub.o: visualstimulusstub.cpp visualstimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \

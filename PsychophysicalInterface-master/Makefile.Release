@@ -16,7 +16,7 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -O2 -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -O2 -std=gnu++1z -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I. -I../asio-1.30.2/include -I../rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -Irelease -I. -I/include -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ 
+INCPATH       = -I. -I../asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -Irelease -I. -I/include -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-s -Wl,-subsystem,windows -mthreads
 LIBS        =        -lws2_32 C:\Qt\6.8.0\mingw_64\lib\libQt6Widgets.a C:\Qt\6.8.0\mingw_64\lib\libQt6Gui.a C:\Qt\6.8.0\mingw_64\lib\libQt6Core.a -lmingw32 C:\Qt\6.8.0\mingw_64\lib\libQt6EntryPoint.a -lshell32  
@@ -353,33 +353,12 @@ release/moc_addadialog.cpp: addadialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		trialstub.h \
 		visualstimulusstub.h \
 		release/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/release/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addadialog.h -o release\moc_addadialog.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/release/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addadialog.h -o release\moc_addadialog.cpp
 
 release/moc_addvdialog.cpp: addvdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
@@ -576,31 +555,10 @@ release/moc_addvdialog.cpp: addvdialog.h \
 		trialstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		release/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/release/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addvdialog.h -o release\moc_addvdialog.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/release/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include addvdialog.h -o release\moc_addvdialog.cpp
 
 release/moc_edittrialdialog.cpp: edittrialdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
@@ -797,31 +755,10 @@ release/moc_edittrialdialog.cpp: edittrialdialog.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		release/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/release/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include edittrialdialog.h -o release\moc_edittrialdialog.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/release/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include edittrialdialog.h -o release\moc_edittrialdialog.cpp
 
 release/moc_mainwindow.cpp: mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMainWindow \
@@ -1020,27 +957,6 @@ release/moc_mainwindow.cpp: mainwindow.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidgetItem \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -1062,7 +978,7 @@ release/moc_mainwindow.cpp: mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
 		release/moc_predefs.h \
 		C:/Qt/6.8.0/mingw_64/bin/moc.exe
-	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master/release/moc_predefs.h" -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/PsychophysicalInterface-master" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/asio-1.30.2/include" -I"C:/Users/Acer/Desktop/ingegneria/tesi magistrale/Codici/rapidjson-master/include/rapidjson" -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\6.8.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master/release/moc_predefs.h -IC:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Acer/Desktop/MultisensorySetup/PsychophysicalInterface-master -IC:/Users/Acer/Desktop/MultisensorySetup/asio-1.30.2/include -IC:/Users/Acer/Desktop/MultisensorySetup/rapidjson-master/include/rapidjson -IC:/Qt/6.8.0/mingw_64/include -IC:/Qt/6.8.0/mingw_64/include/QtWidgets -IC:/Qt/6.8.0/mingw_64/include/QtGui -IC:/Qt/6.8.0/mingw_64/include/QtCore -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include mainwindow.h -o release\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1104,27 +1020,6 @@ release/ExperimentStub.o: ExperimentStub.cpp ExperimentStub.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -1403,31 +1298,43 @@ release/addadialog.o: addadialog.cpp addadialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		trialstub.h \
 		visualstimulusstub.h \
-		ui_addadialog.h
+		ui_addadialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QAbstractButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialogButtonBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFormLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qformlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFrame \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\addadialog.o addadialog.cpp
 
 release/addvdialog.o: addvdialog.cpp addvdialog.h \
@@ -1625,29 +1532,62 @@ release/addvdialog.o: addvdialog.cpp addvdialog.h \
 		trialstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		ui_addvdialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QAbstractButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialogButtonBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFrame \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGridLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPlainTextEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qplaintextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qglyphrun.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qrawfont.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qfontdatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
 		C:/Qt/6.8.0/mingw_64/include/QtGui/QImage \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qfiledialog.h \
@@ -1663,27 +1603,6 @@ release/addvdialog.o: addvdialog.cpp addvdialog.h \
 
 release/auditorystimulusstub.o: auditorystimulusstub.cpp auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -1964,55 +1883,69 @@ release/edittrialdialog.o: edittrialdialog.cpp edittrialdialog.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		ui_edittrialdialog.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QAbstractButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialogButtonBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFrame \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGridLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGroupBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgroupbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidget \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistview.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstyle.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPlainTextEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qplaintextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qglyphrun.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qrawfont.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qfontdatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		addvdialog.h \
 		addadialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\edittrialdialog.o edittrialdialog.cpp
 
 release/gc.o: gc.cpp gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -2095,12 +2028,7 @@ release/gc.o: gc.cpp gc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qiterator.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qbytearraylist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qalgorithms.h \
-		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringmatcher.h \
-		../rapidjson-master/include/rapidjson/istreamwrapper.h \
-		../rapidjson-master/include/rapidjson/stringbuffer.h \
-		../rapidjson-master/include/rapidjson/writer.h \
-		../rapidjson-master/include/rapidjson/internal/dtoa.h \
-		../rapidjson-master/include/rapidjson/internal/itoa.h
+		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringmatcher.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gc.o gc.cpp
 
 release/main.o: main.cpp mainwindow.h \
@@ -2300,27 +2228,6 @@ release/main.o: main.cpp mainwindow.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidgetItem \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -2544,27 +2451,6 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidgetItem \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -2585,6 +2471,51 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qrubberband.h \
 		ui_mainwindow.h \
+		C:/Qt/6.8.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QCheckBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcheckbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QComboBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qcombobox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDoubleSpinBox \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qspinbox.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QGridLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QListWidget \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QMenuBar \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenubar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qmenu.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPlainTextEdit \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qplaintextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtextedit.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qtextlayout.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qglyphrun.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qrawfont.h \
+		C:/Qt/6.8.0/mingw_64/include/QtGui/qfontdatabase.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QSpacerItem \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QStatusBar \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		addvdialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QDialog \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qdialog.h \
@@ -2668,8 +2599,6 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/traits/equality_comparable.hpp \
 		../asio-1.30.2/include/asio/traits/execute_member.hpp \
 		../asio-1.30.2/include/asio/is_applicable_property.hpp \
-		../asio-1.30.2/include/asio/traits/query_static_constexpr_member.hpp \
-		../asio-1.30.2/include/asio/traits/static_query.hpp \
 		../asio-1.30.2/include/asio/execution/any_executor.hpp \
 		../asio-1.30.2/include/asio/detail/assert.hpp \
 		../asio-1.30.2/include/asio/detail/non_const_lvalue.hpp \
@@ -2679,13 +2608,11 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/prefer.hpp \
 		../asio-1.30.2/include/asio/traits/prefer_free.hpp \
 		../asio-1.30.2/include/asio/traits/prefer_member.hpp \
-		../asio-1.30.2/include/asio/traits/require_free.hpp \
-		../asio-1.30.2/include/asio/traits/require_member.hpp \
-		../asio-1.30.2/include/asio/traits/static_require.hpp \
 		../asio-1.30.2/include/asio/query.hpp \
 		../asio-1.30.2/include/asio/traits/query_member.hpp \
 		../asio-1.30.2/include/asio/traits/query_free.hpp \
 		../asio-1.30.2/include/asio/require.hpp \
+		../asio-1.30.2/include/asio/traits/require_free.hpp \
 		../asio-1.30.2/include/asio/execution/blocking_adaptation.hpp \
 		../asio-1.30.2/include/asio/detail/event.hpp \
 		../asio-1.30.2/include/asio/detail/null_event.hpp \
@@ -2695,9 +2622,13 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/posix_event.hpp \
 		../asio-1.30.2/include/asio/detail/impl/posix_event.ipp \
 		../asio-1.30.2/include/asio/detail/std_event.hpp \
+		../asio-1.30.2/include/asio/traits/query_static_constexpr_member.hpp \
+		../asio-1.30.2/include/asio/traits/require_member.hpp \
 		../asio-1.30.2/include/asio/execution/context.hpp \
+		../asio-1.30.2/include/asio/traits/static_query.hpp \
 		../asio-1.30.2/include/asio/execution/context_as.hpp \
 		../asio-1.30.2/include/asio/execution/mapping.hpp \
+		../asio-1.30.2/include/asio/traits/static_require.hpp \
 		../asio-1.30.2/include/asio/execution/occupancy.hpp \
 		../asio-1.30.2/include/asio/execution/outstanding_work.hpp \
 		../asio-1.30.2/include/asio/execution/prefer_only.hpp \
@@ -3064,9 +2995,6 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/detail/future.hpp \
 		../asio-1.30.2/include/asio/placeholders.hpp \
 		../asio-1.30.2/include/asio/posix/basic_descriptor.hpp \
-		../asio-1.30.2/include/asio/posix/basic_stream_descriptor.hpp \
-		../asio-1.30.2/include/asio/posix/descriptor.hpp \
-		../asio-1.30.2/include/asio/posix/stream_descriptor.hpp \
 		../asio-1.30.2/include/asio/prepend.hpp \
 		../asio-1.30.2/include/asio/impl/prepend.hpp \
 		../asio-1.30.2/include/asio/random_access_file.hpp \
@@ -3102,24 +3030,10 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../asio-1.30.2/include/asio/use_future.hpp \
 		../asio-1.30.2/include/asio/impl/use_future.hpp \
 		../asio-1.30.2/include/asio/version.hpp \
-		../asio-1.30.2/include/asio/windows/basic_object_handle.hpp \
-		../asio-1.30.2/include/asio/detail/win_object_handle_service.hpp \
-		../asio-1.30.2/include/asio/detail/impl/win_object_handle_service.ipp \
-		../asio-1.30.2/include/asio/windows/basic_overlapped_handle.hpp \
-		../asio-1.30.2/include/asio/windows/basic_random_access_handle.hpp \
-		../asio-1.30.2/include/asio/windows/basic_stream_handle.hpp \
-		../asio-1.30.2/include/asio/windows/object_handle.hpp \
-		../asio-1.30.2/include/asio/windows/overlapped_handle.hpp \
-		../asio-1.30.2/include/asio/windows/overlapped_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_overlapped_ptr.hpp \
-		../asio-1.30.2/include/asio/detail/win_iocp_overlapped_op.hpp \
-		../asio-1.30.2/include/asio/windows/random_access_handle.hpp \
-		../asio-1.30.2/include/asio/windows/stream_handle.hpp \
 		../asio-1.30.2/include/asio/writable_pipe.hpp \
 		../asio-1.30.2/include/asio/write_at.hpp \
 		../asio-1.30.2/include/asio/impl/write_at.hpp \
 		edittrialdialog.h \
-		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QWidget \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.8.0/mingw_64/include/QtWidgets/qfiledialog.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qdir.h \
@@ -3146,27 +3060,6 @@ release/trialstub.o: trialstub.cpp trialstub.h \
 		visualstimulusstub.h \
 		auditorystimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
@@ -3254,27 +3147,6 @@ release/trialstub.o: trialstub.cpp trialstub.h \
 
 release/visualstimulusstub.o: visualstimulusstub.cpp visualstimulusstub.h \
 		gc.h \
-		../rapidjson-master/include/rapidjson/document.h \
-		../rapidjson-master/include/rapidjson/reader.h \
-		../rapidjson-master/include/rapidjson/allocators.h \
-		../rapidjson-master/include/rapidjson/rapidjson.h \
-		../rapidjson-master/include/rapidjson/msinttypes/stdint.h \
-		../rapidjson-master/include/rapidjson/msinttypes/inttypes.h \
-		../rapidjson-master/include/rapidjson/internal/meta.h \
-		../rapidjson-master/include/rapidjson/stream.h \
-		../rapidjson-master/include/rapidjson/encodings.h \
-		../rapidjson-master/include/rapidjson/encodedstream.h \
-		../rapidjson-master/include/rapidjson/memorystream.h \
-		../rapidjson-master/include/rapidjson/internal/clzll.h \
-		../rapidjson-master/include/rapidjson/internal/stack.h \
-		../rapidjson-master/include/rapidjson/internal/swap.h \
-		../rapidjson-master/include/rapidjson/internal/strtod.h \
-		../rapidjson-master/include/rapidjson/internal/ieee754.h \
-		../rapidjson-master/include/rapidjson/internal/biginteger.h \
-		../rapidjson-master/include/rapidjson/internal/diyfp.h \
-		../rapidjson-master/include/rapidjson/internal/pow10.h \
-		../rapidjson-master/include/rapidjson/error/error.h \
-		../rapidjson-master/include/rapidjson/internal/strfunc.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.8.0/mingw_64/include/QtCore/qlist.h \
