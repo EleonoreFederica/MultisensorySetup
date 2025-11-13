@@ -1,0 +1,16 @@
+{
+  "NAME": "1971_trial_A_left_1391",
+  "DURATION": 1391,
+  "AUDITORY_STIMULI": [
+    {
+      "CHANNEL": 25,
+      "ONSET": 0,
+      "OFFSET": 50,
+      "FREQUENCY": 5000,
+      "DUTY_CYCLE": 50,
+      "CYCLE_OFFSET": 0
+    }
+  ],
+  "VISUAL_STIMULI": [],
+  "TRIAL_TYPE": "A"
+}

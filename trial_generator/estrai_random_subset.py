@@ -20,7 +20,7 @@ ESTRAI_AV = True   # True per estrarre solo trial AV
 
 # === CONFIGURAZIONE ===
 COMBINATIONS_PATH = r"C:\Users\Acer\Desktop\MultisensorySetup\PsychophysicalInterface-master\testing_trials\Mixed"  # Modifica questo path se necessario
-N_RANDOM_TRIALS = 100  # Numero di trial da estrarre casualmente
+N_RANDOM_TRIALS = 20  # Numero di trial da estrarre casualmente
 # Base folder where new subset folders will be created (parent is testing_trials)
 BASE_TESTING_TRIALS_DIR = r"C:\Users\Acer\Desktop\MultisensorySetup\PsychophysicalInterface-master\testing_trials\blocks"
 

@@ -279,6 +279,16 @@ class MainWindow(QWidget):
 
         self.matrices = []
 
+    def determine_side(self, pixels):
+        """Determina LEFT se x in [0-63], RIGHT se x in [64-127]"""
+        if not pixels:
+            return None
+        x_coords = [p[0] for p in pixels]
+        if not x_coords:
+            return None
+        max_x = max(x_coords)
+        return "RIGHT" if max_x >= 64 else "LEFT"
+
     def confirm_current_config(self):
         # Raggruppa le matrici per slave
         slave1_matrices = []
@@ -320,8 +330,10 @@ class MainWindow(QWidget):
                             y_global = y  # verticale
                             pixels.append([x_global, y_global, r, g, b])
             if pixels:
+                side = self.determine_side(pixels)
                 images_json.append({
                     "CONTROLLER_TARGET": slave_name,
+                    "SIDE": side,
                     "PIXELS": pixels
                 })
         # AGGIUNGI (non sovrascrivere) il nuovo stimolo

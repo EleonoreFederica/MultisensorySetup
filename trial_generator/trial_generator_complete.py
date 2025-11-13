@@ -6,12 +6,12 @@ import numpy as np
 # ---------------------------
 # Configurazione (modifica questi valori)
 # ---------------------------
-audio_channels = [6]            # usa solo i canali qui elencati
-target_slaves = ["SLAVE1"]    # usa solo gli slave qui elencati
+audio_channels = [6,7,26,25]            # usa solo i canali qui elencati
+target_slaves = ["SLAVE1", "SLAVE2"]    # usa solo gli slave qui elencati
 visual_dir = "visual cues led matrices"  # cartella con JSON pattern visivi
 
 # ISI: estremo inferiore (incluso) e superiore (escluso) per avere, ad es., 2000 valori
-isi_val_extremes = (1000, 3000)
+isi_val_extremes = (1000, 1500)
 isi_values = np.arange(isi_val_extremes[0], isi_val_extremes[1] + 1)
 N_repeats = len(isi_values)
 
@@ -55,13 +55,23 @@ if os.path.exists(visual_dir):
 else:
     print(f"Warning: visual directory '{visual_dir}' not found.")
 
-# Costruisci mappa slave -> [PIXELS,...]
+# Costruisci mappa slave -> [(PIXELS, SIDE), ...]
 pixels_map = {}
 for entry in pixel_data_entries:
     tgt = entry.get('CONTROLLER_TARGET')
-    pixels_map.setdefault(tgt, []).append(entry.get('PIXELS'))
+    pixels = entry.get('PIXELS')
+    side = entry.get('SIDE')  # Leggi il SIDE dal JSON
+    pixels_map.setdefault(tgt, []).append((pixels, side))
 
 print(f"Loaded {len(pixel_data_entries)} visual entries. CONTROLLER_TARGETs: {sorted(pixels_map.keys())}")
+
+# Mappa di coerenza: (SLAVE, SIDE) -> [canali audio coerenti]
+coherence_map = {
+    ('SLAVE1', 'LEFT'): [6],      # SLAVE1 sinistra -> canale 6
+    ('SLAVE1', 'RIGHT'): [26],     # SLAVE1 destra -> canale 26
+    ('SLAVE2', 'LEFT'): [25],     # SLAVE2 sinistra -> canale 25
+    ('SLAVE2', 'RIGHT'): [7],     # SLAVE2 destra -> canale 7
+}
 
 # ---------------------------
 # Costruzione combinazioni
@@ -81,19 +91,21 @@ for slave in target_slaves:
     if not patterns:
         print(f"Info: nessun pattern visivo trovato per {slave}; non verranno creati V-only per questo slave.")
         continue
-    for pixels in patterns:
-        trial_combinations.append(("V", None, slave, pixels))
+    for pixels, side in patterns:
+        trial_combinations.append(("V", None, slave, pixels, side))
 
-# AV
-for chan in audio_channels:
-    for slave in target_slaves:
-        patterns = pixels_map.get(slave, [])
-        if not patterns:
-            # nessun pattern per questo slave -> non si possono creare AV con questo slave
-            print(f"Info: nessun pattern visivo per {slave}; saltando AV per (chan={chan}, slave={slave}).")
-            continue
-        for pixels in patterns:
-            trial_combinations.append(("AV", chan, slave, pixels))
+# AV - Applica vincolo di coerenza: solo accoppiamenti (chan, slave, side) coerenti
+for slave in target_slaves:
+    patterns = pixels_map.get(slave, [])
+    if not patterns:
+        print(f"Info: nessun pattern visivo per {slave}; saltando AV per questo slave.")
+        continue
+    for pixels, side in patterns:
+        # Trova i canali audio coerenti con (slave, side)
+        coherent_chans = coherence_map.get((slave, side), [])
+        for chan in coherent_chans:
+            if chan in audio_channels:
+                trial_combinations.append(("AV", chan, slave, pixels, side))
 
 # Conteggi e aspettativa
 from collections import Counter
@@ -121,7 +133,11 @@ for sub in ["A", "V", "AV", "Mixed"]:
 # --- Generazione dei trial: per ogni combinazione, per ogni ISI ---
 trial_counter = 1
 for comb in trial_combinations:
-    trial_type, audio_chan, target_slave, pixels = comb
+    if len(comb) == 4:
+        trial_type, audio_chan, target_slave, pixels = comb
+        side = None
+    else:
+        trial_type, audio_chan, target_slave, pixels, side = comb
     # se vuoi ordine casuale degli ISI usa permutation, altrimenti iterali in ordine
     for isi in np.random.permutation(isi_values):
         trial_duration = offset + int(isi)
@@ -144,7 +160,7 @@ for comb in trial_combinations:
                 "DUTY_CYCLE": d_c,
                 "CYCLE_OFFSET": cycle_offset
             }]
-            direction = "right" if audio_chan in [6, 26] else "left"
+            direction = "right" if audio_chan in [7, 26] else "left"
             name_parts.append(direction)
 
         if trial_type in ["V", "AV"]:

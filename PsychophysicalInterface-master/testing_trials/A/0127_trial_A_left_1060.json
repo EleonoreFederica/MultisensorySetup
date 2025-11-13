@@ -1,0 +1,16 @@
+{
+  "NAME": "0127_trial_A_left_1060",
+  "DURATION": 1060,
+  "AUDITORY_STIMULI": [
+    {
+      "CHANNEL": 6,
+      "ONSET": 0,
+      "OFFSET": 50,
+      "FREQUENCY": 5000,
+      "DUTY_CYCLE": 50,
+      "CYCLE_OFFSET": 0
+    }
+  ],
+  "VISUAL_STIMULI": [],
+  "TRIAL_TYPE": "A"
+}

@@ -1,0 +1,16 @@
+{
+  "NAME": "1123_trial_A_right_1185",
+  "DURATION": 1185,
+  "AUDITORY_STIMULI": [
+    {
+      "CHANNEL": 26,
+      "ONSET": 0,
+      "OFFSET": 50,
+      "FREQUENCY": 5000,
+      "DUTY_CYCLE": 50,
+      "CYCLE_OFFSET": 0
+    }
+  ],
+  "VISUAL_STIMULI": [],
+  "TRIAL_TYPE": "A"
+}
